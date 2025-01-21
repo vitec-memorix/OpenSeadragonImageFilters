@@ -42,9 +42,8 @@ gulp.task('uglify', function() {
 });
 
 
-
 gulp.task('watch', ['lint','uglify'], function () {
-    gulp.watch('./src/*.js', ['lint','uglify']);
+    gulp.watch(['./src/*.js','./openseadragon-filtering/*.js'], ['lint','uglify']);
 });
 
 gulp.task('serve', plugins.serve({
